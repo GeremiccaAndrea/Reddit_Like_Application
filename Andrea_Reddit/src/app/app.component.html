@@ -1,0 +1,21 @@
+<form>
+  <h3>Add a Link</h3>
+  <div class="mb-3" >
+    <label for="label1" class="form-label">Cose Inutili:</label> <!-- creo la prima label -->
+    <input name="label1" class="form-control" #newLabel1>
+  </div>
+
+  <div class="mb-3">
+    <label for="spam" class="form-label" >Spam:</label> <!-- creo la seconda label -->
+    <input name="spam"  class="form-control" #newSpam>
+
+    <button (click)="Spammer(newLabel1, newSpam)" class="btn btn-primary"> <!-- creo il bottone -->
+    Submit link
+    </button>
+
+</div>
+</form>
+
+<p *ngFor = "let pippo of articles"> 
+  <app-stampante [x] = "pippo"> </app-stampante> <!-- for per visualizzare il risultato finale  -->
+</p>
